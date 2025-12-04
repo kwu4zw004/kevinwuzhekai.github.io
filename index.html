@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>我的个人主页</title>
+    <title>My Portfolio</title>
     <style>
-        /* --- 1. 全局样式设置 --- */
+        /* --- 1. Global Styles --- */
         :root {
-            --primary-color: #2563eb; /* 主色调：蓝色 */
-            --bg-color: #f8fafc;      /* 背景色：浅灰 */
-            --text-color: #1e293b;    /* 文字色：深灰 */
-            --card-bg: #ffffff;       /* 卡片背景：白色 */
+            --primary-color: #2563eb; /* Primary Blue */
+            --bg-color: #f8fafc;      /* Light Grey BG */
+            --text-color: #1e293b;    /* Dark Grey Text */
+            --card-bg: #ffffff;       /* White Card BG */
         }
 
         body {
@@ -25,7 +25,7 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; padding: 0; }
 
-        /* --- 2. 导航栏 --- */
+        /* --- 2. Navigation --- */
         header {
             background: var(--card-bg);
             padding: 1rem 5%;
@@ -33,8 +33,9 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-            position: sticky; /* 导航栏固定在顶部 */
+            position: sticky;
             top: 0;
+            z-index: 100;
         }
 
         .logo { font-weight: bold; font-size: 1.2rem; }
@@ -42,7 +43,7 @@
         nav ul { display: flex; gap: 20px; }
         nav a:hover { color: var(--primary-color); }
 
-        /* --- 3. 头部介绍 (Hero Section) --- */
+        /* --- 3. Hero Section --- */
         .hero {
             text-align: center;
             padding: 4rem 1rem;
@@ -62,7 +63,7 @@
         }
         .btn:hover { background-color: #1d4ed8; }
 
-        /* --- 4. 通用容器 --- */
+        /* --- 4. Container --- */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -71,7 +72,7 @@
 
         h2 { border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 5px; margin-bottom: 20px;}
 
-        /* --- 5. 项目展示 (Grid布局) --- */
+        /* --- 5. Grid Layout --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -89,7 +90,7 @@
         .card:hover { transform: translateY(-5px); }
         .card h3 { margin-top: 0; }
 
-        /* --- 6. 页脚 --- */
+        /* --- 6. Footer --- */
         footer {
             text-align: center;
             padding: 2rem;
@@ -102,64 +103,63 @@
 <body>
 
     <header>
-        <div class="logo">User's Portfolio</div>
+        <div class="logo">My Portfolio</div>
         <nav>
             <ul>
-                <li><a href="#about">关于我</a></li>
-                <li><a href="#projects">项目</a></li>
-                <li><a href="#contact">联系</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>你好，我是 [你的名字] 👋</h1>
-        <p>这里是一句话简介：比如“一名热爱技术的开发者”或“专注于极简设计的摄影师”。</p>
-        <a href="#contact" class="btn">联系我</a>
+        <h1>Hi, I'm [Your Name] 👋</h1>
+        <p>One-line introduction: e.g., "A Software Engineer based in New York" or "Digital Creator & Designer".</p>
+        <a href="#contact" class="btn">Get in Touch</a>
     </section>
 
     <section id="about" class="container">
-        <h2>关于我</h2>
+        <h2>About Me</h2>
         <p>
-            在这里写下你的详细介绍。比如你的背景、你的技能、你目前正在学习什么。
-            你可以在这里多写几段话，展示你的个性。
+            Write a brief introduction about yourself here. Mention your background, your key skills, and what you are currently working on.
             <br><br>
-            GitHub Pages 非常适合托管这种静态网站，简单又高效。
+            This is a great place to showcase your personality and let visitors know who you are beyond just your code.
         </p>
     </section>
 
     <section id="projects" class="container">
-        <h2>精选项目</h2>
+        <h2>Featured Projects</h2>
         <div class="grid">
             <div class="card">
-                <h3>项目名称 A</h3>
-                <p>这里简要描述项目做了什么，解决了什么问题。比如：这是一个自动化办公脚本。</p>
+                <h3>Project Title A</h3>
+                <p>Brief description of the project. What problem did it solve? What technologies did you use?</p>
             </div>
             
             <div class="card">
-                <h3>项目名称 B</h3>
-                <p>这里简要描述项目。比如：这是一个分析数据的可视化仪表盘。</p>
+                <h3>Project Title B</h3>
+                <p>Brief description of the project. e.g., "A data visualization dashboard for analyzing sales trends."</p>
             </div>
 
             <div class="card">
-                <h3>项目名称 C</h3>
-                <p>这里简要描述项目。比如：这是一个基于 AI 的翻译工具。</p>
+                <h3>Project Title C</h3>
+                <p>Brief description of the project. e.g., "An AI-powered translation tool built with Python."</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="container">
-        <h2>联系方式</h2>
-        <p>如果你对我的工作感兴趣，可以通过以下方式找到我：</p>
+        <h2>Contact</h2>
+        <p>Feel free to reach out if you want to collaborate or just say hi!</p>
         <ul>
-            <li>📧 邮箱: yourname@example.com</li>
+            <li>📧 Email: yourname@example.com</li>
             <li>🐦 Twitter/X: @yourhandle</li>
             <li>🐙 GitHub: github.com/yourname</li>
         </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 [你的名字]. Powered by GitHub Pages.</p>
+        <p>&copy; 2024 [Your Name]. Powered by GitHub Pages.</p>
     </footer>
 
 </body>
