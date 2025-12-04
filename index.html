@@ -13,6 +13,10 @@
             --card-bg: #ffffff;       /* White Card BG */
         }
 
+        html {
+            scroll-behavior: smooth; /* Adds smooth scrolling effect */
+        }
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             margin: 0;
@@ -46,20 +50,21 @@
         /* --- 3. Hero Section --- */
         .hero {
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 6rem 1rem; /* Increased padding slightly */
             max-width: 800px;
             margin: 0 auto;
         }
 
         .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        .hero p { font-size: 1.2rem; color: #64748b; margin-bottom: 2rem; }
+        .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; }
         
         .btn {
             background-color: var(--primary-color);
             color: white;
-            padding: 10px 20px;
-            border-radius: 5px;
+            padding: 12px 24px;
+            border-radius: 6px;
             transition: background 0.3s;
+            font-weight: 500;
         }
         .btn:hover { background-color: #1d4ed8; }
 
@@ -67,36 +72,48 @@
         .container {
             max-width: 1000px;
             margin: 0 auto;
-            padding: 2rem 1rem;
+            padding: 4rem 1rem;
         }
 
-        h2 { border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 5px; margin-bottom: 20px;}
+        h2 { 
+            border-bottom: 3px solid var(--primary-color); 
+            display: inline-block; 
+            padding-bottom: 5px; 
+            margin-bottom: 30px;
+            font-size: 1.8rem;
+        }
 
         /* --- 5. Grid Layout --- */
         .grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 25px;
         }
 
         .card {
             background: var(--card-bg);
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-            transition: transform 0.2s;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border: 1px solid #e2e8f0;
         }
 
-        .card:hover { transform: translateY(-5px); }
-        .card h3 { margin-top: 0; }
+        .card:hover { 
+            transform: translateY(-5px); 
+            box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+        }
+        .card h3 { margin-top: 0; color: var(--text-color); }
+        .card p { color: #64748b; font-size: 0.95rem; }
 
         /* --- 6. Footer --- */
         footer {
             text-align: center;
-            padding: 2rem;
+            padding: 3rem;
             background: #e2e8f0;
             margin-top: 2rem;
             font-size: 0.9rem;
+            color: #64748b;
         }
     </style>
 </head>
@@ -115,16 +132,20 @@
 
     <section class="hero">
         <h1>Hi, I'm [Your Name] 👋</h1>
-        <p>One-line introduction: e.g., "A Software Engineer based in New York" or "Digital Creator & Designer".</p>
+        
+        <p>A passionate developer creating digital experiences.</p>
+        
         <a href="#contact" class="btn">Get in Touch</a>
     </section>
 
     <section id="about" class="container">
         <h2>About Me</h2>
         <p>
-            Write a brief introduction about yourself here. Mention your background, your key skills, and what you are currently working on.
+            Hello! I am a software engineer based in [Your City] with a love for building things that live on the internet. 
+            My interest in web development started back in 2020 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS is fun!
             <br><br>
-            This is a great place to showcase your personality and let visitors know who you are beyond just your code.
+            Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, and a huge corporation. 
+            My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
         </p>
     </section>
 
@@ -132,34 +153,34 @@
         <h2>Featured Projects</h2>
         <div class="grid">
             <div class="card">
-                <h3>Project Title A</h3>
-                <p>Brief description of the project. What problem did it solve? What technologies did you use?</p>
+                <h3>E-Commerce Dashboard</h3>
+                <p>A comprehensive dashboard for online retailers to track sales, manage inventory, and analyze customer trends. Built with React and Node.js.</p>
             </div>
             
             <div class="card">
-                <h3>Project Title B</h3>
-                <p>Brief description of the project. e.g., "A data visualization dashboard for analyzing sales trends."</p>
+                <h3>Weather App</h3>
+                <p>A sleek, mobile-friendly application that provides real-time weather updates and forecasts using the OpenWeatherMap API.</p>
             </div>
 
             <div class="card">
-                <h3>Project Title C</h3>
-                <p>Brief description of the project. e.g., "An AI-powered translation tool built with Python."</p>
+                <h3>Task Manager CLI</h3>
+                <p>A command-line interface tool designed for developers to manage their daily tasks and boost productivity directly from the terminal.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>Feel free to reach out if you want to collaborate or just say hi!</p>
+        <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
         <ul>
-            <li>📧 Email: yourname@example.com</li>
-            <li>🐦 Twitter/X: @yourhandle</li>
+            <li>📧 Email: hello@example.com</li>
+            <li>🐦 Twitter: @yourhandle</li>
             <li>🐙 GitHub: github.com/yourname</li>
         </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 [Your Name]. Powered by GitHub Pages.</p>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
     </footer>
 
 </body>
