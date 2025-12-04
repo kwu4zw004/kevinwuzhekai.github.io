@@ -7,7 +7,10 @@
     <style>
         /* --- 1. Global Styles --- */
         :root {
-            --primary-color: #C41230; /* CMU Red styled (Tartans red) or keep Blue if you prefer. Let's keep a professional Blue for tech/biz balance, or use #b00 for CMU vibe. I will stick to the clean Blue for now as it's safe. */
+            /* Since you are at CMU, using a color closer to CMU Red (#C41230) 
+               or a professional dark blue (#2563eb) works best. 
+               Current: Professional Blue.
+            */
             --primary-color: #2563eb; 
             --bg-color: #f8fafc;
             --text-color: #1e293b;
@@ -46,7 +49,7 @@
         nav ul { display: flex; gap: 20px; }
         nav a:hover { color: var(--primary-color); }
         
-        /* Mobile responsive nav adjustment */
+        /* Mobile responsive adjustment */
         @media (max-width: 600px) {
             nav ul { gap: 10px; font-size: 0.9rem; }
         }
@@ -60,7 +63,7 @@
         }
 
         .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #0f172a; }
-        .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;}
+        .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;}
         
         .btn {
             background-color: var(--primary-color);
@@ -112,7 +115,6 @@
         .card .subtitle { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
         .card p { color: #64748b; font-size: 0.95rem; }
 
-        /* Education Specific Styles */
         .edu-date {
             float: right;
             font-size: 0.85rem;
@@ -149,7 +151,7 @@
         
         <p>
             Dual Degree Master's Student at <strong>Carnegie Mellon University</strong>. <br>
-            Bridging Mechanical Engineering & Technology Innovation Management.
+            Mechanical Engineering and Engineering & Technology Management.
         </p>
         
         <a href="#contact" class="btn">Get in Touch</a>
@@ -158,7 +160,7 @@
     <section id="about" class="container">
         <h2>About Me</h2>
         <p>
-            I am a graduate student at Carnegie Mellon University, pursuing a dual degree in <strong>Mechanical Engineering</strong> and <strong>Engineering & Technology Innovation Management (ETIM)</strong>. 
+            I am a graduate student at Carnegie Mellon University, pursuing a dual degree in <strong>Mechanical Engineering</strong> and <strong>Engineering & Technology Management (ETM)</strong>. 
             <br><br>
             My background combines strong analytical skills in engineering with a strategic understanding of technology management. I earned my Bachelor's degree from <strong>Bucknell University</strong>, where I majored in Mechanical Engineering and minored in Mathematics.
             <br><br>
@@ -171,21 +173,17 @@
         <div class="grid">
             
             <div class="card">
-                <span class="edu-date">Expected 2025 (Adjust Year)</span>
+                <span class="edu-date">Expected 2025</span>
                 <h3>Carnegie Mellon University</h3>
                 <span class="subtitle">Pittsburgh, PA</span>
                 <p>
                     <strong>Master of Science</strong> in Mechanical Engineering<br>
-                    <strong>Master of Science</strong> in Engineering & Technology Innovation Management (ETIM)
-                </p>
-                <p style="font-size: 0.9rem; margin-top: 10px;">
-                    Focus: Advanced Mechanical Design, Technology Strategy, Product Management.
+                    <strong>Master of Science</strong> in Engineering & Technology Management
                 </p>
             </div>
 
             <div class="card">
-                <span class="edu-date">Graduated (Year)</span>
-                <h3>Bucknell University</h3>
+                <span class="edu-date">Graduated (Year)</span> <h3>Bucknell University</h3>
                 <span class="subtitle">Lewisburg, PA</span>
                 <p>
                     <strong>Bachelor of Science</strong> in Mechanical Engineering<br>
@@ -206,7 +204,7 @@
             
             <div class="card">
                 <h3>Innovation Strategy Case Study</h3>
-                <p>A project from your ETIM coursework analyzing a technology market entry strategy or product lifecycle management.</p>
+                <p>A project from your ETM coursework analyzing a technology market entry strategy or product lifecycle management.</p>
             </div>
 
             <div class="card">
