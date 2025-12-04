@@ -3,19 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Zhekai (Kevin) Wu | Portfolio</title>
     <style>
         /* --- 1. Global Styles --- */
         :root {
-            --primary-color: #2563eb; /* Primary Blue */
-            --bg-color: #f8fafc;      /* Light Grey BG */
-            --text-color: #1e293b;    /* Dark Grey Text */
-            --card-bg: #ffffff;       /* White Card BG */
+            --primary-color: #C41230; /* CMU Red styled (Tartans red) or keep Blue if you prefer. Let's keep a professional Blue for tech/biz balance, or use #b00 for CMU vibe. I will stick to the clean Blue for now as it's safe. */
+            --primary-color: #2563eb; 
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --card-bg: #ffffff;
         }
 
-        html {
-            scroll-behavior: smooth; /* Adds smooth scrolling effect */
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -46,17 +45,22 @@
         
         nav ul { display: flex; gap: 20px; }
         nav a:hover { color: var(--primary-color); }
+        
+        /* Mobile responsive nav adjustment */
+        @media (max-width: 600px) {
+            nav ul { gap: 10px; font-size: 0.9rem; }
+        }
 
         /* --- 3. Hero Section --- */
         .hero {
             text-align: center;
-            padding: 6rem 1rem; /* Increased padding slightly */
-            max-width: 800px;
+            padding: 6rem 1rem;
+            max-width: 900px;
             margin: 0 auto;
         }
 
-        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-        .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #0f172a; }
+        .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto;}
         
         .btn {
             background-color: var(--primary-color);
@@ -65,6 +69,7 @@
             border-radius: 6px;
             transition: background 0.3s;
             font-weight: 500;
+            display: inline-block;
         }
         .btn:hover { background-color: #1d4ed8; }
 
@@ -103,8 +108,16 @@
             transform: translateY(-5px); 
             box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         }
-        .card h3 { margin-top: 0; color: var(--text-color); }
+        .card h3 { margin-top: 0; color: var(--text-color); margin-bottom: 0.5rem; }
+        .card .subtitle { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
         .card p { color: #64748b; font-size: 0.95rem; }
+
+        /* Education Specific Styles */
+        .edu-date {
+            float: right;
+            font-size: 0.85rem;
+            color: #94a3b8;
+        }
 
         /* --- 6. Footer --- */
         footer {
@@ -120,10 +133,11 @@
 <body>
 
     <header>
-        <div class="logo">My Portfolio</div>
+        <div class="logo">Kevin Wu</div>
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
+                <li><a href="#education">Education</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -131,9 +145,12 @@
     </header>
 
     <section class="hero">
-        <h1>Hi, I'm [Your Name] 👋</h1>
+        <h1>Hi, I'm Zhekai (Kevin) Wu 👋</h1>
         
-        <p>A passionate developer creating digital experiences.</p>
+        <p>
+            Dual Degree Master's Student at <strong>Carnegie Mellon University</strong>. <br>
+            Bridging Mechanical Engineering & Technology Innovation Management.
+        </p>
         
         <a href="#contact" class="btn">Get in Touch</a>
     </section>
@@ -141,46 +158,79 @@
     <section id="about" class="container">
         <h2>About Me</h2>
         <p>
-            Hello! I am a software engineer based in [Your City] with a love for building things that live on the internet. 
-            My interest in web development started back in 2020 when I decided to try editing custom Tumblr themes — turns out hacking together HTML & CSS is fun!
+            I am a graduate student at Carnegie Mellon University, pursuing a dual degree in <strong>Mechanical Engineering</strong> and <strong>Engineering & Technology Innovation Management (ETIM)</strong>. 
             <br><br>
-            Fast-forward to today, and I’ve had the privilege of working at an advertising agency, a start-up, and a huge corporation. 
-            My main focus these days is building accessible, inclusive products and digital experiences for a variety of clients.
+            My background combines strong analytical skills in engineering with a strategic understanding of technology management. I earned my Bachelor's degree from <strong>Bucknell University</strong>, where I majored in Mechanical Engineering and minored in Mathematics.
+            <br><br>
+            I am passionate about solving complex engineering challenges while understanding the business and innovation strategies required to bring those solutions to market.
         </p>
     </section>
 
-    <section id="projects" class="container">
-        <h2>Featured Projects</h2>
+    <section id="education" class="container">
+        <h2>Education</h2>
         <div class="grid">
-            <div class="card">
-                <h3>E-Commerce Dashboard</h3>
-                <p>A comprehensive dashboard for online retailers to track sales, manage inventory, and analyze customer trends. Built with React and Node.js.</p>
-            </div>
             
             <div class="card">
-                <h3>Weather App</h3>
-                <p>A sleek, mobile-friendly application that provides real-time weather updates and forecasts using the OpenWeatherMap API.</p>
+                <span class="edu-date">Expected 2025 (Adjust Year)</span>
+                <h3>Carnegie Mellon University</h3>
+                <span class="subtitle">Pittsburgh, PA</span>
+                <p>
+                    <strong>Master of Science</strong> in Mechanical Engineering<br>
+                    <strong>Master of Science</strong> in Engineering & Technology Innovation Management (ETIM)
+                </p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">
+                    Focus: Advanced Mechanical Design, Technology Strategy, Product Management.
+                </p>
             </div>
 
             <div class="card">
-                <h3>Task Manager CLI</h3>
-                <p>A command-line interface tool designed for developers to manage their daily tasks and boost productivity directly from the terminal.</p>
+                <span class="edu-date">Graduated (Year)</span>
+                <h3>Bucknell University</h3>
+                <span class="subtitle">Lewisburg, PA</span>
+                <p>
+                    <strong>Bachelor of Science</strong> in Mechanical Engineering<br>
+                    <strong>Minor</strong> in Mathematics
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Selected Projects</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Engineering Capstone Project</h3>
+                <p>Description of your senior design or major mechanical engineering project. Briefly explain the problem, your design process, and the result.</p>
+            </div>
+            
+            <div class="card">
+                <h3>Innovation Strategy Case Study</h3>
+                <p>A project from your ETIM coursework analyzing a technology market entry strategy or product lifecycle management.</p>
+            </div>
+
+            <div class="card">
+                <h3>Data Analysis / Math Project</h3>
+                <p>A project leveraging your mathematics background, such as MATLAB simulation, statistical analysis, or computational modeling.</p>
             </div>
         </div>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>I'm currently looking for new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
-        <ul>
-            <li>📧 Email: hello@example.com</li>
-            <li>🐦 Twitter: @yourhandle</li>
-            <li>🐙 GitHub: github.com/yourname</li>
+        <p>I am currently open to internship or full-time opportunities. Feel free to connect!</p>
+        <ul style="margin-top: 20px;">
+            <li style="margin-bottom: 10px;">
+                📧 <strong>Email:</strong> <a href="mailto:kevinwuzhekai@gmail.com" style="color:var(--primary-color);">kevinwuzhekai@gmail.com</a>
+            </li>
+            <li style="margin-bottom: 10px;">
+                💼 <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/z-kevin-wu-57a373220" target="_blank" style="color:var(--primary-color);">linkedin.com/in/z-kevin-wu</a>
+            </li>
         </ul>
     </section>
 
     <footer>
-        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+        <p>&copy; 2024 Zhekai (Kevin) Wu. All rights reserved.</p>
     </footer>
 
 </body>
