@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的个人主页</title>
+    <style>
+        /* --- 1. 全局样式设置 --- */
+        :root {
+            --primary-color: #2563eb; /* 主色调：蓝色 */
+            --bg-color: #f8fafc;      /* 背景色：浅灰 */
+            --text-color: #1e293b;    /* 文字色：深灰 */
+            --card-bg: #ffffff;       /* 卡片背景：白色 */
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; padding: 0; }
+
+        /* --- 2. 导航栏 --- */
+        header {
+            background: var(--card-bg);
+            padding: 1rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky; /* 导航栏固定在顶部 */
+            top: 0;
+        }
+
+        .logo { font-weight: bold; font-size: 1.2rem; }
+        
+        nav ul { display: flex; gap: 20px; }
+        nav a:hover { color: var(--primary-color); }
+
+        /* --- 3. 头部介绍 (Hero Section) --- */
+        .hero {
+            text-align: center;
+            padding: 4rem 1rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .hero p { font-size: 1.2rem; color: #64748b; margin-bottom: 2rem; }
+        
+        .btn {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover { background-color: #1d4ed8; }
+
+        /* --- 4. 通用容器 --- */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+        }
+
+        h2 { border-bottom: 2px solid var(--primary-color); display: inline-block; padding-bottom: 5px; margin-bottom: 20px;}
+
+        /* --- 5. 项目展示 (Grid布局) --- */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            transition: transform 0.2s;
+        }
+
+        .card:hover { transform: translateY(-5px); }
+        .card h3 { margin-top: 0; }
+
+        /* --- 6. 页脚 --- */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: #e2e8f0;
+            margin-top: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">User's Portfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#projects">项目</a></li>
+                <li><a href="#contact">联系</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>你好，我是 [你的名字] 👋</h1>
+        <p>这里是一句话简介：比如“一名热爱技术的开发者”或“专注于极简设计的摄影师”。</p>
+        <a href="#contact" class="btn">联系我</a>
+    </section>
+
+    <section id="about" class="container">
+        <h2>关于我</h2>
+        <p>
+            在这里写下你的详细介绍。比如你的背景、你的技能、你目前正在学习什么。
+            你可以在这里多写几段话，展示你的个性。
+            <br><br>
+            GitHub Pages 非常适合托管这种静态网站，简单又高效。
+        </p>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>精选项目</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>项目名称 A</h3>
+                <p>这里简要描述项目做了什么，解决了什么问题。比如：这是一个自动化办公脚本。</p>
+            </div>
+            
+            <div class="card">
+                <h3>项目名称 B</h3>
+                <p>这里简要描述项目。比如：这是一个分析数据的可视化仪表盘。</p>
+            </div>
+
+            <div class="card">
+                <h3>项目名称 C</h3>
+                <p>这里简要描述项目。比如：这是一个基于 AI 的翻译工具。</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="container">
+        <h2>联系方式</h2>
+        <p>如果你对我的工作感兴趣，可以通过以下方式找到我：</p>
+        <ul>
+            <li>📧 邮箱: yourname@example.com</li>
+            <li>🐦 Twitter/X: @yourhandle</li>
+            <li>🐙 GitHub: github.com/yourname</li>
+        </ul>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [你的名字]. Powered by GitHub Pages.</p>
+    </footer>
+
+</body>
+</html>
