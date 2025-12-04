@@ -11,6 +11,8 @@
             --bg-color: #f8fafc;
             --text-color: #1e293b;
             --card-bg: #ffffff;
+            --tag-bg: #e0f2fe;
+            --tag-text: #0284c7;
         }
 
         html { scroll-behavior: smooth; }
@@ -71,7 +73,7 @@
         }
         .btn:hover { background-color: #1d4ed8; }
 
-        /* --- 4. Container --- */
+        /* --- 4. Container & Layouts --- */
         .container {
             max-width: 1000px;
             margin: 0 auto;
@@ -86,10 +88,9 @@
             font-size: 1.8rem;
         }
 
-        /* --- 5. Grid Layout --- */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 25px;
         }
 
@@ -100,20 +101,40 @@
             box-shadow: 0 4px 6px rgba(0,0,0,0.05);
             transition: transform 0.2s, box-shadow 0.2s;
             border: 1px solid #e2e8f0;
+            display: flex;
+            flex-direction: column;
         }
 
         .card:hover { 
             transform: translateY(-5px); 
             box-shadow: 0 10px 15px rgba(0,0,0,0.1);
         }
+        
         .card h3 { margin-top: 0; color: var(--text-color); margin-bottom: 0.5rem; }
         .card .subtitle { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
-        .card p { color: #64748b; font-size: 0.95rem; }
+        .card p { color: #64748b; font-size: 0.95rem; flex-grow: 1; }
 
+        /* Education Date Style */
         .edu-date {
             float: right;
             font-size: 0.85rem;
             color: #94a3b8;
+            font-weight: 500;
+        }
+
+        /* Skills Tags */
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        .skill-tag {
+            background-color: var(--tag-bg);
+            color: var(--tag-text);
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
             font-weight: 500;
         }
 
@@ -156,12 +177,24 @@
     <section id="about" class="container">
         <h2>About Me</h2>
         <p>
-            I am a graduate student at Carnegie Mellon University, pursuing a dual degree in <strong>Mechanical Engineering</strong> and <strong>Engineering & Technology Management (ETM)</strong>. 
+            I am a graduate student at Carnegie Mellon University, integrating advanced <strong>Mechanical Engineering</strong> principles with strategic <strong>Engineering & Technology Management</strong>. 
             <br><br>
-            My background combines strong analytical skills in engineering with a strategic understanding of technology management. I earned my Bachelor's degree from <strong>Bucknell University</strong>, where I majored in Mechanical Engineering and minored in Mathematics.
+            With a background from Bucknell University (MechE + Math Minor), I have hands-on experience in <strong>product design, FEA simulation, and robotics</strong>, alongside professional experience in <strong>project management and technical sales</strong>. 
             <br><br>
-            I am passionate about solving complex engineering challenges while understanding the business and innovation strategies required to bring those solutions to market.
+            I am passionate about bridging the gap between technical innovation and business strategy to bring complex engineering solutions to market.
         </p>
+        
+        <h3 style="margin-top: 30px; font-size: 1.2rem;">Technical Skills</h3>
+        <div class="skills-list">
+            <span class="skill-tag">SolidWorks (CSWA)</span>
+            <span class="skill-tag">Abaqus CAE</span>
+            <span class="skill-tag">MATLAB & Simulink</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">COMSOL</span>
+            <span class="skill-tag">Arduino</span>
+            <span class="skill-tag">3D Printing & Prototyping</span>
+            <span class="skill-tag">Project Management</span>
+        </div>
     </section>
 
     <section id="education" class="container">
@@ -169,12 +202,15 @@
         <div class="grid">
             
             <div class="card">
-                <span class="edu-date">Expected 2027</span>
+                <span class="edu-date">Expected May 2027</span>
                 <h3>Carnegie Mellon University</h3>
                 <span class="subtitle">Pittsburgh, PA</span>
                 <p>
-                    <strong>Master of Science</strong> in Mechanical Engineering<br>
-                    <strong>Master of Science</strong> in Engineering & Technology Management
+                    <strong>M.S.</strong> in Mechanical Engineering<br>
+                    <strong>M.S.</strong> in Engineering & Technology Management
+                </p>
+                <p style="font-size: 0.9rem; margin-top:10px;">
+                    <strong>Coursework:</strong> Machine Learning & AI, Numerical Methods, Project Management, Strategy.
                 </p>
             </div>
 
@@ -183,8 +219,12 @@
                 <h3>Bucknell University</h3>
                 <span class="subtitle">Lewisburg, PA</span>
                 <p>
-                    <strong>Bachelor of Science</strong> in Mechanical Engineering<br>
+                    <strong>B.S.</strong> in Mechanical Engineering<br>
                     <strong>Minor</strong> in Mathematics
+                </p>
+                <p style="font-size: 0.9rem; margin-top:10px;">
+                    <strong>Honors:</strong> Cum Laude, Dean’s List.<br>
+                    <strong>GPA:</strong> 3.52/4.00 (Engineering GPA: 3.58)
                 </p>
             </div>
 
@@ -192,28 +232,55 @@
     </section>
 
     <section id="projects" class="container">
-        <h2>Selected Projects</h2>
+        <h2>Featured Projects</h2>
         <div class="grid">
+            
             <div class="card">
-                <h3>Engineering Capstone Project</h3>
-                <p>Description of your senior design or major mechanical engineering project. Briefly explain the problem, your design process, and the result.</p>
+                <h3>Manufacturing Process Optimization</h3>
+                <span class="subtitle">Senior Design Project Manager</span>
+                <p>
+                    Led a team to improve production efficiency for Waterbury Button Company. Analyzed manufacturing workflows and implemented strategies that <strong>increased production speed by 40%</strong> while optimizing the budget to 70% of allocated funding.
+                </p>
+                <div class="skills-list" style="margin-top: auto;">
+                    <span class="skill-tag">Project Management</span>
+                    <span class="skill-tag">Process Improvement</span>
+                    <span class="skill-tag">Gantt Charts</span>
+                </div>
             </div>
             
             <div class="card">
-                <h3>Innovation Strategy Case Study</h3>
-                <p>A project from your ETM coursework analyzing a technology market entry strategy or product lifecycle management.</p>
+                <h3>Origami-Inspired Soft Gripper</h3>
+                <span class="subtitle">Research Scholar</span>
+                <p>
+                    Designed a bistable soft robotic gripper using origami mechanics. Conducted <strong>FEA simulations with Abaqus CAE</strong> to predict performance and utilized Filaflex 3D printing to create the prototype. Integrated the gripper with a UFactory robotic arm for agricultural harvesting applications.
+                </p>
+                <div class="skills-list" style="margin-top: auto;">
+                    <span class="skill-tag">Abaqus CAE</span>
+                    <span class="skill-tag">Soft Robotics</span>
+                    <span class="skill-tag">3D Printing</span>
+                </div>
             </div>
 
             <div class="card">
-                <h3>Data Analysis / Math Project</h3>
-                <p>A project leveraging your mathematics background, such as MATLAB simulation, statistical analysis, or computational modeling.</p>
+                <h3>Bio-Inspired Caterpillar Robot</h3>
+                <span class="subtitle">Independent Study</span>
+                <p>
+                    Developed a climbing robot capable of navigating vertical pipes. Created mathematical models in <strong>MATLAB</strong> to optimize force distribution and gait analysis. Implemented locomotion control systems using <strong>Arduino</strong> and custom-designed 3D printed parts.
+                </p>
+                <div class="skills-list" style="margin-top: auto;">
+                    <span class="skill-tag">Mechatronics</span>
+                    <span class="skill-tag">MATLAB</span>
+                    <span class="skill-tag">Arduino</span>
+                    <span class="skill-tag">SolidWorks</span>
+                </div>
             </div>
+
         </div>
     </section>
 
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>I am currently open to internship or full-time opportunities. Feel free to connect!</p>
+        <p>I am currently open to internship or full-time opportunities in Mechanical Engineering or Product Management. Feel free to connect!</p>
         <ul style="margin-top: 20px;">
             <li style="margin-bottom: 10px;">
                 📧 <strong>Email:</strong> <a href="mailto:kevinwuzhekai@gmail.com" style="color:var(--primary-color);">kevinwuzhekai@gmail.com</a>
