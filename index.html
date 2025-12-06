@@ -118,12 +118,25 @@
         .card h3 { margin-top: 0; color: var(--text-color); margin-bottom: 0.5rem; }
         .card .subtitle { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
         .card p { color: #64748b; font-size: 0.95rem; flex-grow: 1; }
+        
+        /* List in cards (for experience bullets) */
+        .card ul {
+            list-style: disc;
+            padding-left: 20px;
+            margin-top: 10px;
+            color: #64748b;
+            font-size: 0.95rem;
+        }
+        .card ul li { margin-bottom: 5px; }
 
-        .edu-date {
+        .date-badge {
             float: right;
             font-size: 0.85rem;
             color: #94a3b8;
             font-weight: 500;
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
         }
 
         /* Coursework List Styling */
@@ -178,8 +191,8 @@
         <div class="logo">Kevin Wu</div>
         <nav>
             <ul>
-                <li><a href="#about">About</a></li>
                 <li><a href="#education">Education</a></li>
+                <li><a href="#experience">Experience</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -216,7 +229,7 @@
             <span class="skill-tag">COMSOL</span>
             <span class="skill-tag">Arduino</span>
             <span class="skill-tag">3D Printing & Prototyping</span>
-            <span class="skill-tag">Project Management</span>
+            <span class="skill-tag">Gantt Charts</span>
         </div>
     </section>
 
@@ -225,15 +238,17 @@
         <div class="grid">
             
             <div class="card">
-                <span class="edu-date">Expected May 2027</span>
-                <h3>Carnegie Mellon University</h3>
+                <div>
+                    <span class="date-badge">Exp. May 2027</span>
+                    <h3>Carnegie Mellon University</h3>
+                </div>
                 <span class="subtitle">Pittsburgh, PA</span>
                 <p>
                     <strong>M.S.</strong> in Mechanical Engineering<br>
                     <strong>M.S.</strong> in Engineering & Technology Management
                 </p>
                 <div class="course-list">
-                    <span class="course-category">Coursework:</span>
+                    <span class="course-category">Coursework Highlights:</span>
                     <div class="course-items">
                         Machine Learning & A.I., Numerical Methods in Engineering, Project Management, Strategy of Management, Data Science.
                     </div>
@@ -241,8 +256,10 @@
             </div>
 
             <div class="card">
-                <span class="edu-date">May 2025</span>
-                <h3>Bucknell University</h3>
+                <div>
+                    <span class="date-badge">May 2025</span>
+                    <h3>Bucknell University</h3>
+                </div>
                 <span class="subtitle">Lewisburg, PA</span>
                 <p>
                     <strong>Major:</strong> Mechanical Engineering & Math
@@ -254,12 +271,12 @@
                 <div class="course-list">
                     <span class="course-category">Mechanical Engineering Core:</span>
                     <div class="course-items">
-                        Mechanical Design, Manufacturing Processes, System Dynamics, Solid Mechanics, Fluid Dynamics, Thermodynamics, Heat Transfer, Thermal Design, Soft Robotics, Advanced Materials, Human Movement Biomechanics, HVAC Systems in Smart Buildings, Graphics for Design & Manufacture, Senior Design I & II.
+                        Mechanical Design, Manufacturing Processes, System Dynamics, Solid Mechanics, Fluid Dynamics, Thermodynamics, Heat Transfer, Thermal Design, Soft Robotics, Advanced Materials, Senior Design I & II.
                     </div>
                     
                     <span class="course-category">Math & Engineering Sciences:</span>
                     <div class="course-items">
-                        Calculus I-III, Differential Equations, Probability, Statistics, Computational Analysis, ECE Fundamentals, Science of Materials, General Chemistry, Physics.
+                        Calculus I-III, Differential Equations, Probability, Statistics, Computational Analysis, ECE Fundamentals, Science of Materials.
                     </div>
                 </div>
             </div>
@@ -267,28 +284,91 @@
         </div>
     </section>
 
-    <section id="projects" class="container">
-        <h2>Featured Projects</h2>
+    <section id="experience" class="container">
+        <h2>Professional Experience</h2>
         <div class="grid">
             
             <div class="card">
-                <h3>Manufacturing Process Optimization</h3>
-                <span class="subtitle">Senior Design Project Manager</span>
+                <div>
+                    <span class="date-badge">Jun 2025 – Aug 2025</span>
+                    <h3>Retail Sales Manager</h3>
+                </div>
+                <span class="subtitle">Changzhou Chengjie Vehicle Accessories | China</span>
+                <ul>
+                    <li>Conducted market research to identify <strong>30+ new automotive customer leads</strong> and 2 potential corporate partnerships.</li>
+                    <li>Delivered <strong>100+ technical sales quotations</strong> across 10+ countries, ensuring compliance with precise product specifications.</li>
+                    <li>Formulated weekly sales reports and presented recommendations to senior leadership.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="date-badge">Current</span>
+                    <h3>Maker Space Technician</h3>
+                </div>
+                <span class="subtitle">Bucknell University 7th Street Studio</span>
+                <ul>
+                    <li>Supervised the operation and organization of the labs.</li>
+                    <li>Instructed <strong>100+ students</strong> on the use of 3D printers, laser cutters, and vinyl cutters.</li>
+                    <li>Assisted users with design principles and troubleshooting manufacturing equipment.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="date-badge">Aug 2024 – Dec 2024</span>
+                    <h3>Course Assistant (TA)</h3>
+                </div>
+                <span class="subtitle">Bucknell University | Graphics & 3D Design</span>
+                <ul>
+                    <li>Addressed student questions related to <strong>SolidWorks</strong>, design principles, and project execution.</li>
+                    <li>Graded assignments and held office hours to support student learning in mechanical design.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <div>
+                    <span class="date-badge">Sept 2022 – Dec 2022</span>
+                    <h3>Garman Guide (Mentor)</h3>
+                </div>
+                <span class="subtitle">Bucknell University</span>
+                <ul>
+                    <li>Mentored first-year engineering students to ensure a smooth transition into the academic environment.</li>
+                    <li>Initiated weekly meetings and liaised with the Dean’s office to resolve academic challenges.</li>
+                </ul>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class="container">
+        <h2>Technical Projects</h2>
+        <div class="grid">
+            
+            <div class="card">
+                <div>
+                    <span class="date-badge">Aug 2024 - May 2025</span>
+                    <h3>Manufacturing Process Optimization</h3>
+                </div>
+                <span class="subtitle">Senior Design | Waterbury Button Company</span>
                 <p>
-                    Led a team to improve production efficiency for Waterbury Button Company. Analyzed manufacturing workflows and implemented strategies that <strong>increased production speed by 40%</strong> while optimizing the budget to 70% of allocated funding.
+                    Led a team to improve production efficiency for a manufacturing client. Analyzed workflows and implemented strategies that <strong>increased production speed by 40%</strong> while optimizing the budget to 70% of allocated funding.
                 </p>
                 <div class="skills-list" style="margin-top: auto;">
                     <span class="skill-tag">Project Management</span>
-                    <span class="skill-tag">Process Improvement</span>
+                    <span class="skill-tag">Process Optimization</span>
                     <span class="skill-tag">Gantt Charts</span>
                 </div>
             </div>
             
             <div class="card">
-                <h3>Origami-Inspired Soft Gripper</h3>
-                <span class="subtitle">Research Scholar</span>
+                <div>
+                    <span class="date-badge">Jun 2024 – Jul 2024</span>
+                    <h3>Origami-Inspired Soft Gripper</h3>
+                </div>
+                <span class="subtitle">Summer Research Scholar</span>
                 <p>
-                    Designed a bistable soft robotic gripper using origami mechanics. Conducted <strong>FEA simulations with Abaqus CAE</strong> to predict performance and utilized Filaflex 3D printing to create the prototype. Integrated the gripper with a UFactory robotic arm for agricultural harvesting applications.
+                    Designed a bistable soft robotic gripper using origami mechanics. Conducted <strong>FEA simulations with Abaqus CAE</strong> to predict performance and utilized Filaflex 3D printing to create the prototype. Integrated the gripper with a <strong>UFactory robotic arm</strong> for innovation harvesting solutions.
                 </p>
                 <div class="skills-list" style="margin-top: auto;">
                     <span class="skill-tag">Abaqus CAE</span>
@@ -298,10 +378,13 @@
             </div>
 
             <div class="card">
-                <h3>Bio-Inspired Caterpillar Robot</h3>
-                <span class="subtitle">Independent Study</span>
+                <div>
+                    <span class="date-badge">Mar 2023 – May 2024</span>
+                    <h3>Bio-Inspired Caterpillar Robot</h3>
+                </div>
+                <span class="subtitle">Independent Study (MECH 285/385)</span>
                 <p>
-                    Developed a climbing robot capable of navigating vertical pipes. Created mathematical models in <strong>MATLAB</strong> to optimize force distribution and gait analysis. Implemented locomotion control systems using <strong>Arduino</strong> and custom-designed 3D printed parts.
+                    Developed a climbing robot capable of navigating vertical pipes. Created mathematical models in <strong>MATLAB</strong> to optimize force distribution and gait analysis. Implemented locomotion control systems using <strong>Arduino IDE</strong> and custom-designed PLA/Filaflex parts.
                 </p>
                 <div class="skills-list" style="margin-top: auto;">
                     <span class="skill-tag">Mechatronics</span>
@@ -316,7 +399,7 @@
 
     <section id="contact" class="container">
         <h2>Contact</h2>
-        <p>I am currently open to internship or full-time opportunities in Mechanical Engineering or Product Management. Feel free to connect!</p>
+        <p>I am currently open to internship or full-time opportunities. Feel free to connect!</p>
         <ul style="margin-top: 20px;">
             <li style="margin-bottom: 10px;">
                 📧 <strong>Email:</strong> <a href="mailto:kevinwuzhekai@gmail.com" style="color:var(--primary-color);">kevinwuzhekai@gmail.com</a>
