@@ -62,7 +62,6 @@
         .hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: #0f172a; }
         .hero p { font-size: 1.25rem; color: #64748b; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;}
         
-        /* New class for highlighting text in Hero */
         .highlight {
             color: var(--primary-color);
             font-weight: 600;
@@ -120,12 +119,30 @@
         .card .subtitle { color: var(--primary-color); font-weight: 600; font-size: 0.9rem; margin-bottom: 1rem; display: block; }
         .card p { color: #64748b; font-size: 0.95rem; flex-grow: 1; }
 
-        /* Education Date Style */
         .edu-date {
             float: right;
             font-size: 0.85rem;
             color: #94a3b8;
             font-weight: 500;
+        }
+
+        /* Coursework List Styling */
+        .course-list {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.9rem;
+        }
+        .course-category {
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+        .course-items {
+            color: #64748b;
+            margin-bottom: 10px;
+            line-height: 1.5;
         }
 
         /* Skills Tags */
@@ -215,9 +232,12 @@
                     <strong>M.S.</strong> in Mechanical Engineering<br>
                     <strong>M.S.</strong> in Engineering & Technology Management
                 </p>
-                <p style="font-size: 0.9rem; margin-top:10px;">
-                    <strong>Coursework:</strong> Machine Learning & AI, Numerical Methods, Project Management, Strategy.
-                </p>
+                <div class="course-list">
+                    <span class="course-category">Coursework:</span>
+                    <div class="course-items">
+                        Machine Learning & A.I., Numerical Methods in Engineering, Project Management, Strategy of Management, Data Science.
+                    </div>
+                </div>
             </div>
 
             <div class="card">
@@ -227,9 +247,21 @@
                 <p>
                     <strong>Major:</strong> Mechanical Engineering & Math
                 </p>
-                <p style="font-size: 0.9rem; margin-top:10px;">
+                <p style="font-size: 0.9rem; margin-top:5px;">
                     <strong>Honors:</strong> Cum Laude, Dean’s List.
                 </p>
+
+                <div class="course-list">
+                    <span class="course-category">Mechanical Engineering Core:</span>
+                    <div class="course-items">
+                        Mechanical Design, Manufacturing Processes, System Dynamics, Solid Mechanics, Fluid Dynamics, Thermodynamics, Heat Transfer, Thermal Design, Soft Robotics, Advanced Materials, Human Movement Biomechanics, HVAC Systems in Smart Buildings, Graphics for Design & Manufacture, Senior Design I & II.
+                    </div>
+                    
+                    <span class="course-category">Math & Engineering Sciences:</span>
+                    <div class="course-items">
+                        Calculus I-III, Differential Equations, Probability, Statistics, Computational Analysis, ECE Fundamentals, Science of Materials, General Chemistry, Physics.
+                    </div>
+                </div>
             </div>
 
         </div>
